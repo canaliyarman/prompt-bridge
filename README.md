@@ -122,7 +122,7 @@ Detailed commands, offline guarantees, output contracts, metrics, and quality ga
 
 ## What happens next
 
-The current evidence calls for Mode C:
+The current evidence calls for Mode C. Progress and acceptance criteria are tracked in [TODO.md](TODO.md):
 
 1. Generate paired S0 and official B(LT) embeddings for a phrase corpus.
 2. Train a normalized `Linear(512, 512)` mapping after confirming both dimensions.
