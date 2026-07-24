@@ -1,0 +1,32 @@
+schema_version: 1
+seed: 0
+device: cpu
+image_size: 640
+confidence_threshold: 0.25
+iou_threshold: 0.7
+max_detections: 300
+warmup_runs: 1
+measured_repetitions: 5
+agnostic_nms: false
+prompt_set: visdrone_prompts
+
+paths:
+  mobileclip_repository: third_party/ml-mobileclip
+  mobileclip_checkpoint: artifacts/checkpoints/mobileclip_s0.pt
+  yoloe_repository: third_party/yoloe
+  yoloe_checkpoint: artifacts/checkpoints/yoloe-v8s-seg.pt
+  clip_repository: third_party/clip
+  blt_checkpoint: artifacts/checkpoints/mobileclip_blt.ts
+  baseline_metadata: outputs/baseline/metadata.json
+  images: data/images
+  annotations: data/annotations
+
+mobileclip:
+  architecture: mobileclip_s0
+  encoder_name: MobileCLIP-S0
+
+notes:
+  - Paths are relative to the repository root.
+  - Checkpoints and source repositories must be provisioned explicitly.
+  - The scripts never download missing weights.
+  - Mode B requires the passed Mode A metadata and an exact run-signature match.

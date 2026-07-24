@@ -1,0 +1,20 @@
+schema_version: 1
+dataset: VisDrone2019-DET-test-dev
+purpose: supplemental_native_class_smoke
+image_ids:
+  - 0000078_06777_d_0000020
+  - 0000078_02363_d_0000007
+  - 9999952_00000_d_0000009
+  - 0000278_02951_d_0000008
+  - 0000063_00500_d_0000001
+categories:
+  1: pedestrian
+  2: people
+  3: bicycle
+  4: car
+  5: van
+  6: truck
+  7: tricycle
+  8: awning tricycle
+  9: bus
+  10: motorcycle

@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv
+.venv/
+venv/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+*.swp
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Explicitly provisioned upstream sources and model assets
+third_party/**
+!third_party/
+!third_party/.gitkeep
+artifacts/checkpoints/**
+!artifacts/
+!artifacts/checkpoints/
+!artifacts/checkpoints/.gitkeep
+*.pt
+*.pth
+*.ckpt
+*.ts
+*.onnx
+*.xmodel
+
+# Licensed/local datasets
+data/images/**
+!data/images/.gitkeep
+data/annotations/**
+!data/annotations/.gitkeep
+!data/annotations/annotation_schema.json
+
+# Generated experiment outputs
+outputs/**
+!outputs/
+!outputs/**/
+!outputs/**/.gitkeep
+
+# Generated plots/tensors
+*.npy
+*.npz

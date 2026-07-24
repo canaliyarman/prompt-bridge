@@ -1,0 +1,37 @@
+prompts:
+  - person
+  - car
+  - red car
+  - Fiat car
+  - red Fiat car
+  - white Fiat car
+  - red Renault car
+  - red compact passenger car
+  - truck
+  - bus
+  - motorcycle
+
+minimal_prompts:
+  - car
+  - red car
+  - Fiat car
+  - red Fiat car
+  - red Renault car
+  - white Fiat car
+
+templates:
+  - "{}"
+  - "a photo of a {}"
+  - "an aerial image of a {}"
+  - "a small {} viewed from above"
+visdrone_prompts:
+  - pedestrian
+  - people
+  - bicycle
+  - car
+  - van
+  - truck
+  - tricycle
+  - awning tricycle
+  - bus
+  - motorcycle

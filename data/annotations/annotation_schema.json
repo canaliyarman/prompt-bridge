@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MobileCLIP-S0 YOLOE evaluation annotations",
+  "type": "object",
+  "required": ["schema_version", "images"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "images": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["image_id", "file_name", "scenario_tags", "objects"],
+        "properties": {
+          "image_id": {"type": "string", "minLength": 1},
+          "file_name": {"type": "string", "minLength": 1},
+          "scenario_tags": {"type": "array", "items": {"type": "string"}},
+          "objects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "box_xyxy", "positive_prompt_ids", "evaluable_hard_negative_prompt_ids"],
+              "properties": {
+                "id": {"type": "string", "minLength": 1},
+                "box_xyxy": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number"}},
+                "positive_prompt_ids": {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 0}},
+                "evaluable_hard_negative_prompt_ids": {"type": "array", "items": {"type": "integer", "minimum": 0}},
+                "mission_relevant": {"type": "boolean", "default": true}
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

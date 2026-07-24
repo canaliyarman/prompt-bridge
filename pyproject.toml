@@ -1,0 +1,10 @@
+[project]
+name = "prompt-bridge"
+version = "0.1.0"
+description = "Evaluate and align alternative text encoders with open-vocabulary detectors"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
